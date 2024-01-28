@@ -2,27 +2,6 @@
     <div :class="['home', slide]">
         <!-- FireWatch Mountain -->
         <div ref="parallax" class="parallax">
-            <div class="parallax__layer parallax__layer__0">
-                <img :src="assets.parallax_0.value" alt="云朵背景图片" class="cloud animation" draggable="false" />
-            </div>
-            <div class="parallax__layer parallax__layer__1">
-                <img :src="assets.parallax_1.value" alt="山岳背景图片" draggable="false" />
-            </div>
-            <div class="parallax__layer parallax__layer__2">
-                <img :src="assets.parallax_2.value" alt="山岳背景图片" draggable="false" />
-            </div>
-            <div class="parallax__layer parallax__layer__3">
-                <img :src="assets.parallax_3.value" alt="山岳背景图片" draggable="false" />
-            </div>
-            <div class="parallax__layer parallax__layer__4">
-                <img :src="assets.parallax_4.value" alt="山岳背景图片" draggable="false" />
-            </div>
-            <div class="parallax__layer parallax__layer__5">
-                <img :src="assets.parallax_5.value" alt="山岳背景图片" draggable="false" />
-            </div>
-            <div class="parallax__layer parallax__layer__6">
-                <img :src="assets.parallax_6.value" alt="山岳背景图片" draggable="false" />
-            </div>
             <div class="parallax__cover" />
         </div>
 
@@ -46,7 +25,7 @@
                     </div>
                     <div class="buttons">
                         <div class="into-article">
-                            <a id="into-article" href="/articles/index.html">进入博客</a>
+                            <a id="into-article" href="/flow">进入博客</a>
                         </div>
                     </div>
                 </div>
@@ -99,51 +78,7 @@ export default {
             sidebar,
             recommends: Object.entries(sidebar.getRecommends()),
             slide: SLIDES[0],
-            scrollHeight: null,
-            assets: {
-                parallax_0: {
-                    sort: 0,
-                    delay: 100 * 6,
-                    value: 'https://mgear-image.oss-cn-shanghai.aliyuncs.com/image/homepage/layer_0.png',
-                    cb: () => this.$set(this.assets.parallax_0, 'done', true)
-                },
-                parallax_1: {
-                    sort: 1,
-                    delay: 100 * 5,
-                    value: 'https://mgear-image.oss-cn-shanghai.aliyuncs.com/image/homepage/layer_1.png',
-                    cb: () => this.$set(this.assets.parallax_1, 'done', true)
-                },
-                parallax_2: {
-                    sort: 2,
-                    delay: 100 * 4,
-                    value: 'https://mgear-image.oss-cn-shanghai.aliyuncs.com/image/homepage/layer_2.png',
-                    cb: () => this.$set(this.assets.parallax_2, 'done', true)
-                },
-                parallax_3: {
-                    sort: 3,
-                    delay: 100 * 3,
-                    value: 'https://mgear-image.oss-cn-shanghai.aliyuncs.com/image/homepage/layer_3.png',
-                    cb: () => this.$set(this.assets.parallax_3, 'done', true)
-                },
-                parallax_4: {
-                    sort: 4,
-                    delay: 100 * 2,
-                    value: 'https://mgear-image.oss-cn-shanghai.aliyuncs.com/image/homepage/layer_4.png',
-                    cb: () => this.$set(this.assets.parallax_4, 'done', true)
-                },
-                parallax_5: {
-                    sort: 5,
-                    delay: 100 * 1,
-                    value: 'https://mgear-image.oss-cn-shanghai.aliyuncs.com/image/homepage/layer_5.png',
-                    cb: () => this.$set(this.assets.parallax_5, 'done', true)
-                },
-                parallax_6: {
-                    sort: 6,
-                    delay: 100 * 0,
-                    value: 'https://mgear-image.oss-cn-shanghai.aliyuncs.com/image/homepage/layer_6.png',
-                    cb: () => this.$set(this.assets.parallax_6, 'done', true)
-                }
-            }
+            scrollHeight: null
         }
     },
     computed: {
